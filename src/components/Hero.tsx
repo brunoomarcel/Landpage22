@@ -10,7 +10,7 @@ const Hero = () => {
   const parallaxOffset = useParallax();
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-gradient-subtle px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
+    <section className="relative min-h-screen flex flex-col overflow-hidden bg-gradient-subtle px-4 sm:px-6 lg:px-12 pt-4 sm:pt-6 lg:pt-6 pb-10 sm:pb-16">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-primary opacity-20" />
 
@@ -24,18 +24,18 @@ const Hero = () => {
       {/* Navigation Bar */}
       <nav className="md:sticky top-0 z-50 backdrop-blur-sm bg-transparent border-b border-white/10">
         <div className="container mx-auto">
-          <div className="flex flex-wrap items-center justify-between gap-4 py-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-between gap-4 py-4">
             <img src="/logo.png" alt="Newaylab Logo" className="h-10 sm:h-12 w-auto" />
             <a
               href="https://chat.whatsapp.com/EOl7E9PNAtoJVdaKl5eLnm"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="hidden sm:block"
             >
               <Button
                 variant="cta"
                 size="lg"
-                className="group text-sm md:text-base px-4 md:px-8 w-full sm:w-auto justify-center"
+                className="group text-sm md:text-base px-4 md:px-8"
               >
                 Entrar na Comunidade
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -110,15 +110,6 @@ const Hero = () => {
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 bg-black/70 border border-white/10 rounded-2xl p-6 backdrop-blur-md space-y-2">
-                <h3 className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg">
-                  Entre em nossa comunidade agora e faça parte!
-                </h3>
-                <p className="text-lg text-white/80">
-                  Conecte-se com quem está no campo de batalha e acelere seus resultados com automações de IA.
-                </p>
-              </div>
             </div>
           </div>
         </div>
