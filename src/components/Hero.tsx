@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
-import logo from "@/assets/em.png";
 import AdvancedParticles from "@/components/AdvancedParticles";
 import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 
@@ -26,11 +24,13 @@ const Hero = () => {
       <nav className="md:sticky top-0 z-50 backdrop-blur-sm bg-transparent border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <img src={logo} alt="Newaylab Logo" className="h-8 w-auto" />
-            <Button variant="cta" size="lg" className="group text-sm md:text-base px-4 md:px-8">
-              Entrar na Comunidade
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <img src="/logo.png" alt="Newaylab Logo" className="h-12 w-auto" />
+            <a href="https://chat.whatsapp.com/EOl7E9PNAtoJVdaKl5eLnm" target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="lg" className="group text-sm md:text-base px-4 md:px-8">
+                Entrar na Comunidade
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </nav>
@@ -49,7 +49,7 @@ const Hero = () => {
                 : 'translateY(40px)'
             }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Conecte-se com Especialistas em{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 Automação com IA
@@ -62,14 +62,16 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg group h-[54px] px-10">
-                Quero Fazer Parte
-                <ArrowRight className="w-7 h-7 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href="https://chat.whatsapp.com/EOl7E9PNAtoJVdaKl5eLnm" target="_blank" rel="noopener noreferrer">
+                <Button variant="hero" size="lg" className="text-lg group h-[54px] px-10">
+                  Quero Fazer Parte
+                  <ArrowRight className="w-7 h-7 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
           
-          {/* Image */}
+          {/* Video */}
           <div
             ref={imageRef}
             className={`relative transition-opacity duration-700 delay-200 ${
@@ -82,11 +84,28 @@ const Hero = () => {
             }}
           >
             <div className="absolute inset-0 bg-gradient-primary blur-3xl opacity-30" />
-            <img
-              src={heroImage}
-              alt="Profissionais colaborando em automações com IA"
-              className="relative rounded-2xl shadow-card border border-primary/20"
-            />
+            <div className="relative rounded-2xl shadow-card border border-primary/20 overflow-hidden">
+              <video
+                src="/video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full opacity-60"
+                style={{ marginTop: '-10%' }}
+              />
+              {/* Overlay escuro */}
+              <div className="absolute inset-0 bg-black/40" />
+
+              {/* Texto sobre o vídeo */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center space-y-4 px-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg">
+                    Entre em nossa comunidade agora e faça parte!
+                  </h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

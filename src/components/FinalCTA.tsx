@@ -43,10 +43,12 @@ const FinalCTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="cta" size="lg" className="text-lg group">
-              Entrar na Comunidade Newaylab
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="https://chat.whatsapp.com/EOl7E9PNAtoJVdaKl5eLnm" target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="lg" className="text-lg group">
+                Entrar na Comunidade Newaylab
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
           
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
