@@ -3,12 +3,12 @@ import { Instagram, Youtube } from "lucide-react";
 
 const SocialCards = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-background/50">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-12 bg-gradient-to-b from-background to-background/50">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Instagram Card */}
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 p-1">
-            <div className="bg-background rounded-3xl p-8">
+            <div className="bg-background rounded-3xl p-6 sm:p-8">
               <div className="flex flex-col items-center text-center space-y-6">
                 {/* Instagram Icon */}
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center">
@@ -46,7 +46,7 @@ const SocialCards = () => {
 
           {/* YouTube Card */}
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-red-600 to-red-500 p-1">
-            <div className="bg-background rounded-3xl p-8">
+            <div className="bg-background rounded-3xl p-6 sm:p-8">
               <div className="flex flex-col items-center text-center space-y-6">
                 {/* YouTube Icon */}
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-red-600 to-red-500 flex items-center justify-center">
