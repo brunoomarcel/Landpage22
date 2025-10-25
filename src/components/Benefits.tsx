@@ -95,8 +95,8 @@ const Benefits = () => {
   }, []);
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
+      <div className="container mx-auto relative z-10">
         <div
           ref={titleRef}
           className={`text-center mb-16 transition-opacity duration-700 ${
@@ -117,7 +117,7 @@ const Benefits = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {benefits.map((benefit, index) => (
             <Card
               key={index}

@@ -8,7 +8,7 @@ const FinalCTA = () => {
   const parallaxOffset = useParallax();
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-subtle">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 relative overflow-hidden bg-gradient-subtle">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-primary opacity-20" />
 
@@ -19,7 +19,7 @@ const FinalCTA = () => {
         interactive={true}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto relative z-10">
         <div
           ref={contentRef}
           className={`max-w-4xl mx-auto text-center space-y-8 transition-opacity duration-700 ${
@@ -38,13 +38,22 @@ const FinalCTA = () => {
             </span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Junte-se a centenas de profissionais que já estão transformando ideias em resultados reais usando IA
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="https://chat.whatsapp.com/EOl7E9PNAtoJVdaKl5eLnm" target="_blank" rel="noopener noreferrer">
-              <Button variant="cta" size="lg" className="text-lg group">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
+            <a
+              href="https://chat.whatsapp.com/EOl7E9PNAtoJVdaKl5eLnm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                variant="cta"
+                size="lg"
+                className="text-lg group px-8 py-6 w-full sm:w-auto justify-center"
+              >
                 Entrar na Comunidade Newaylab
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
